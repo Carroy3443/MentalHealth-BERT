@@ -332,7 +332,7 @@ def fig_scenario_comparison() -> Path:
                  fontsize=13, y=1.02)
     fig.tight_layout()
     out = FIG_DIR / "scenario_comparison.png"
-    fig.savefig(out, dpi=180)
+    fig.savefig(out, dpi=180, bbox_inches="tight")
     plt.close(fig)
     return out
 
