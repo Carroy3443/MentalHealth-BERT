@@ -128,7 +128,7 @@ def summarize(obs: pd.DataFrame, ia: pd.DataFrame) -> dict:
 def fig_interarrival_hist(ia: pd.DataFrame, summary: dict) -> Path:
     fig, ax = plt.subplots(figsize=(7.5, 4.5))
     values = ia["InterArrivalMin"].values
-    bins = np.arange(0, values.max() + 1.0, 1.0)
+    bins = np.arange(0, values.max() + 2.0, 1.0)
     ax.hist(values, bins=bins, color=COLOR_PRIMARY, edgecolor="white",
             alpha=0.85, label="Observed inter-arrivals")
 
